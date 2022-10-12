@@ -6,7 +6,7 @@
 /*   By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 22:09:56 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/04 10:57:15 by tohsumi          ###   ########.fr       */
+/*   Updated: 2022/10/12 20:27:45 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		usdst[i] = ussrc[i];
 		if (usdst[i++] == (unsigned char)c)
-			return (&dst[i]);
+			return ((char *)usdst + i);
 	}
 	return (NULL);
 }
